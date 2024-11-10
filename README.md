@@ -53,4 +53,8 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 ## Libraries used
 
 1. T3 App
-2. cuid - for generating task ids
+
+### How to launch the app:
+
+- pnpm run install
+- pnpm run dev
