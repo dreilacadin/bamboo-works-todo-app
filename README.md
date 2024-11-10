@@ -49,3 +49,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
      tasks (e.g., using react-window or react-virtualized).
    - [] Optimize re-rendering to avoid unnecessary updates when adding,
      editing, or reordering tasks (e.g., with React.memo).
+
+## Libraries used
+
+1. T3 App
