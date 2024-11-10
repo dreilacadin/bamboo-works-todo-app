@@ -32,8 +32,8 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 
 1. Core To-Do List Features
 
-   - [] Users can add new tasks with a title and description.
-   - [] Tasks should have a status: Pending, In Progress, Completed.
+   - [x] Users can add new tasks with a title and description.
+   - [x] Tasks should have a status: Pending, In Progress, Completed.
    - [] Users can edit and delete tasks.
    - [] Users can filter tasks by their status (Pending, In Progress,
      Completed).
@@ -49,3 +49,12 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
      tasks (e.g., using react-window or react-virtualized).
    - [] Optimize re-rendering to avoid unnecessary updates when adding,
      editing, or reordering tasks (e.g., with React.memo).
+
+## Libraries used
+
+1. T3 App
+
+### How to launch the app:
+
+- pnpm run install
+- pnpm run dev
