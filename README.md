@@ -53,9 +53,13 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 ## Libraries used
 
 1. T3 App
+<<<<<<< HEAD
 2. Zustand state management
 
 ### How to launch the app:
 
 - pnpm run install
 - pnpm run dev
+=======
+2. cuid - for generating task ids
+>>>>>>> parent of 067a8df (modifying README file)
