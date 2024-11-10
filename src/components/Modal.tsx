@@ -5,7 +5,7 @@ export default function Modal({
 }: {
   title: string;
   children: React.ReactNode;
-  closeModal: () => void;
+  closeModal?: () => void;
 }) {
   return (
     <div

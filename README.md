@@ -32,8 +32,8 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 
 1. Core To-Do List Features
 
-   - [] Users can add new tasks with a title and description.
-   - [] Tasks should have a status: Pending, In Progress, Completed.
+   - [x] Users can add new tasks with a title and description.
+   - [x] Tasks should have a status: Pending, In Progress, Completed.
    - [] Users can edit and delete tasks.
    - [] Users can filter tasks by their status (Pending, In Progress,
      Completed).
