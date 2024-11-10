@@ -1,9 +1,11 @@
 export default function Modal({
   title,
   children,
+  closeModal,
 }: {
   title: string;
   children: React.ReactNode;
+  closeModal: () => void;
 }) {
   return (
     <div
@@ -22,6 +24,7 @@ export default function Modal({
               type="button"
               className="end-2.5 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
               data-modal-hide="authentication-modal"
+              onClick={closeModal}
             >
               <svg
                 className="h-3 w-3"

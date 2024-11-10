@@ -1,4 +1,5 @@
 import AddTaskForm from "~/app/_components/AddTaskForm";
+import TodoList from "~/app/_components/TodoList";
 import Tabs from "~/components/Tabs";
 
 export default function HomePage() {
@@ -12,8 +13,9 @@ export default function HomePage() {
         {/* Main Todo App content */}
         <Tabs />
         {/* TaskInput */}
-        <div className="flex w-full items-center justify-end space-x-4">
+        <div className="flex w-full flex-col items-center justify-end space-x-4">
           <AddTaskForm />
+          <TodoList />
         </div>
       </div>
     </main>

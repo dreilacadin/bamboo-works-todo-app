@@ -1,10 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 import Modal from "~/components/Modal";
+import useTodoStore from "~/store";
+import { type Task } from "~/types";
 
 export default function AddTaskForm() {
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [newTask, setNewTask] = useState<Task>({
+    id: "",
+    title: "",
+    description: "",
+    status: "pending",
+  });
+
+  const { addTodo } = useTodoStore();
+
+  function closeModal() {
+    return setShowModal(false);
+  }
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    /** If newTask title and descriptions are not empty, add it to global state */
+    if (!!newTask.title.length && !!newTask.description.length) {
+      addTodo(newTask);
+    }
+
+    setShowModal(false);
+  }
+
   return (
     <>
       <button
@@ -16,8 +41,8 @@ export default function AddTaskForm() {
       </button>
 
       {showModal && (
-        <Modal title="Add Task">
-          <form className="space-y-4" action="#">
+        <Modal title="Add Task" closeModal={closeModal}>
+          <form className="space-y-4" action="#" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="title"
@@ -31,6 +56,12 @@ export default function AddTaskForm() {
                 id="title"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                 placeholder="Document component"
+                onChange={(e) =>
+                  setNewTask({
+                    ...newTask,
+                    title: e.target.value,
+                  })
+                }
                 required
               />
             </div>
@@ -47,6 +78,12 @@ export default function AddTaskForm() {
                 id="description"
                 placeholder="Write good component documentation"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
+                onChange={(e) =>
+                  setNewTask({
+                    ...newTask,
+                    description: e.target.value,
+                  })
+                }
                 required
               />
             </div>
