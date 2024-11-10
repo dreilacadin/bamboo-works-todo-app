@@ -34,7 +34,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 
    - [x] Users can add new tasks with a title and description.
    - [x] Tasks should have a status: Pending, In Progress, Completed.
-   - [] Users can edit and delete tasks.
+   - [x] Users can edit and delete tasks.
    - [] Users can filter tasks by their status (Pending, In Progress,
      Completed).
    - [] Implement a search bar to find tasks by title.
@@ -53,6 +53,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 ## Libraries used
 
 1. T3 App
+2. Zustand state management
 
 ### How to launch the app:
 
